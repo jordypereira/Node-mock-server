@@ -3,9 +3,21 @@
   "total": 34,
   "limit": 10000,
   "objects": [
-    {"id": 1, "hint":  23, "user": 1376, "seen": 1549532985085},
-    {"id": 2, "hint":  23, "user": 1376, "seen": 1549532985085},
-    {"id": 43, "hint": 13, "user": 1376, "seen": 1549532985085}
+    {
+      "id": 13,
+      "name": "Archived Test Post 1",
+      "user": 13
+    },
+    {
+      "id": 23,
+      "name": "Archived Test Post 2",
+      "user": 23
+    },
+    {
+      "id": 33,
+      "name": "Archived Test Post 3",
+      "user": 33
+    }
   ],
   "pages": 1,
   "previous": null,

@@ -94,4 +94,42 @@ module.exports = {
       });
     });
   },
+
+  dataDeleter: (req, res) => {
+    const [module, model, uid] = req.originalUrl.split('/').filter(Boolean);
+    const filePath = path.join(__dirname, endpointsPath, module, `${model}.json`);
+
+    console.log('saving new data', module, model, uid, req.body);
+
+    readFile(filePath, (err, serverData) => {
+      if (err) {
+        console.log(err);
+        res.send({});
+
+        return;
+      }
+
+      if (!uid) {
+        console.log('No id provided');
+        res.send({});
+
+        return;
+      }
+
+      const objects = serverData.objects.filter(({ id }) => id !== uid);
+      const newData = {
+        ...serverData,
+        objects,
+      };
+
+      fs.writeFile(filePath, JSON.stringify(newData, null, 2), 'utf8', (error) => {
+        if (error) {
+          console.log(error);
+          res.send({});
+        } else {
+          res.send(req.body);
+        }
+      });
+    });
+  },
 };

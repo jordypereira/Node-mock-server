@@ -99,7 +99,7 @@ module.exports = {
     const [module, model, uid] = req.originalUrl.split('/').filter(Boolean);
     const filePath = path.join(__dirname, endpointsPath, module, `${model}.json`);
 
-    console.log('saving new data', module, model, uid, req.body);
+    console.log('Deleting data', module, model, uid, req.body);
 
     readFile(filePath, (err, serverData) => {
       if (err) {

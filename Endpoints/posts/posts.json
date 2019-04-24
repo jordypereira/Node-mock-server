@@ -3,9 +3,21 @@
   "total": 34,
   "limit": 10000,
   "objects": [
-    {"id": 13, "name": "dragFieldsToTemplate"},
-    {"id": 23, "name": "sectionHandlerInfo23"},
-    {"id": 33, "name": "sectionHandlerInfo"}
+    {
+      "id": 13,
+      "name": "Test Post 1",
+      "user": 13
+    },
+    {
+      "id": 23,
+      "name": "Test Post 2",
+      "user": 23
+    },
+    {
+      "id": 33,
+      "name": "Test Post 3",
+      "user": 33
+    }
   ],
   "pages": 1,
   "previous": null,

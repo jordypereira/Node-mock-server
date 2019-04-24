@@ -9,7 +9,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8984;
 }
-app.listen(port);
 
 const jsonParser = express.json();
 

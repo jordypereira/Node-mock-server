@@ -1,7 +1,7 @@
 const cors = require('cors');
 const express = require('express');
 
-const { dataFetcher, dataSetter } = require('./serverActions');
+const { dataFetcher, dataSetter, dataDeleter } = require('./serverActions');
 
 const app = express();
 
@@ -23,5 +23,6 @@ app.get('/test', (req, res) => {
 app.get('*', dataFetcher);
 app.put('*', jsonParser, dataSetter);
 app.post('*', jsonParser, dataSetter);
+app.delete('*', jsonParser, dataDeleter);
 
 app.listen(port, () => console.log(`Dev server running on port ${port}!`));

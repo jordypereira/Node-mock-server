@@ -24,4 +24,4 @@ app.get('*', dataFetcher);
 app.put('*', jsonParser, dataSetter);
 app.post('*', jsonParser, dataSetter);
 
-app.listen(port);
+app.listen(port, () => console.log(`Dev server running on port ${port}!`));

@@ -1,4 +1,4 @@
-// const cors = require('cors');
+const cors = require('cors');
 const express = require('express');
 
 const { dataFetcher, dataSetter } = require('./serverActions');
@@ -12,8 +12,8 @@ if (port == null || port == "") {
 
 const jsonParser = express.json();
 
-// app.use(cors());
-// app.options('*', cors());
+app.use(cors());
+app.options('*', cors());
 
 app.get(/favicon\.ico/, (req, res) => res.send(''));
 
